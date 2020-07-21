@@ -2015,11 +2015,21 @@ var wpformsElementorVars = {"recaptcha_type":"v2"};
 <script type='text/javascript' src='wp-content\plugins\wpforms-lite\assets\js\mailcheck.min.js?ver=1.1.2'></script>
 
 <script>
-(function($){
-  $(document).on('contextmenu', 'img', function() {
-      return false;
-  })
-})(jQuery);
+var client = {
+     init: function() {
+          var o=this;
+
+          // this will disable dragging of all images
+          $("img").mousedown(function(e){
+               e.preventDefault()
+          });
+
+          // this will disable right-click on all images
+          $("body").on("contextmenu",function(e){
+               return false;
+          });
+    }
+};
 </script>
 
 	</body>
