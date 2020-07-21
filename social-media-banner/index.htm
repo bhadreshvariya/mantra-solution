@@ -1065,7 +1065,7 @@ span.wpcf7-list-item {
 				</div>
 				<div class="elementor-element elementor-element-474a447a elementor-invisible elementor-widget elementor-widget-text-editor" data-id="474a447a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p>We have designed 1 year all festival social media post <span style="color: #ff6600;">JPEG, JPG % PNG</span> File Formats. For The Limited Time! <br />You can grab this Offer for Just ₹999 Rather Than Price <del>₹2399</del>.</p></div>
+					<div class="elementor-text-editor elementor-clearfix"><p>We have designed 1 year all festival social media post <span style="color: #ff6600;">JPEG, JPG &quot; PNG</span> File Formats. For The Limited Time! <br />You can grab this Offer for Just ₹999 Rather Than Price <del>₹2399</del>.</p></div>
 				</div>
 				</div>
 				
@@ -1909,6 +1909,24 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 				};
 
 	</script>
+    
+    <script>
+var client = {
+     init: function() {
+          var o=this;
+
+          // this will disable dragging of all images
+          $("img").mousedown(function(e){
+               e.preventDefault()
+          });
+
+          // this will disable right-click on all images
+          $("body").on("contextmenu",function(e){
+               return false;
+          });
+    }
+};
+</script>
 
 		</body>
 </html>
