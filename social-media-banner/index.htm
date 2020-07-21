@@ -1910,22 +1910,11 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 	</script>
     
-    <script>
-var client = {
-     init: function() {
-          var o=this;
-
-          // this will disable dragging of all images
-          $("img").mousedown(function(e){
-               e.preventDefault()
-          });
-
-          // this will disable right-click on all images
-          $("body").on("contextmenu",function(e){
-               return false;
-          });
-    }
-};
+   <script type="text/javascript">
+    const images = document.getElementsByTagName('img');
+for (let i = 0; i < images.length; i++) {
+    images[i].addEventListener('contextmenu', event => event.preventDefault());
+}
 </script>
 
 		</body>
